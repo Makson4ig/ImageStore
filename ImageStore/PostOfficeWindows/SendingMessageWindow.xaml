@@ -1,0 +1,63 @@
+﻿<Window x:Class="ImageStore.PostOfficeWindows.SendingMessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+         Title="SendingMessageWindow" Height="260" Width="400" ResizeMode="NoResize" WindowStyle="None">
+    <Grid  x:Name="GridAddDrive" Background="#FFB9D1EA" Height="260" VerticalAlignment="Top">
+        <TextBox x:Name="TextBoxLoginMail" materialDesign:HintAssist.Hint="Логин почты" HorizontalAlignment="Left" Height="33" Margin="50,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontFamily="Roboto" FontSize="20">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBox.Foreground>
+        </TextBox>
+        <PasswordBox x:Name="TextBoxPasswordMail" materialDesign:HintAssist.Hint="Пароль почты" Height="33" Margin="50,92,50,0" VerticalAlignment="Top" FontFamily="Roboto" FontSize="20">
+            <PasswordBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </PasswordBox.Foreground>
+        </PasswordBox>
+        <ComboBox x:Name="ComboBoxLevelAccess" materialDesign:HintAssist.Hint="Уровень доступа" Margin="50,130,50,97" VerticalAlignment="Stretch" FontFamily="Roboto" FontSize="20">
+            <ComboBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </ComboBox.Foreground>
+        </ComboBox>
+        <ComboBox x:Name="ComboBoxUserApprove" materialDesign:HintAssist.Hint="Получатель" Margin="50,168,50,0" VerticalAlignment="Top" Height="33" FontFamily="Roboto" FontSize="20">
+            <ComboBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </ComboBox.Foreground>
+        </ComboBox>
+        <Button x:Name="OkMail" Content="Отправить" Height="29" VerticalAlignment="Top" Background="#FF90A4AE" BorderBrush="#FF90A4AE" OpacityMask="#FF90A4AE" Margin="50,216,50,0" FontFamily="Roboto" FontWeight="Normal" FontSize="14" Click="OkMail_Click"  >
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="ExitMail" Height="35" VerticalAlignment="Top" Width="60" HorizontalAlignment="Right" Background="#FFB9D1EA" BorderBrush="#FF90A4AE" Foreground="#FF90A4AE" OpacityMask="#FF90A4AE" Click="ExitMail_Click">
+            <Image Source="/ImageStore;component/Icon/Exit.png" Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <TextBlock Name="TextBlockLoginNewUser" Text ="пока что ничего" HorizontalAlignment ="Left" Margin="40,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label Content="Отправка письма на согласование" Margin="5,12,65,0" VerticalAlignment="Top" Height="30" FontFamily="Roboto" FontSize="20">
+            <Label.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Label.Foreground>
+        </Label>
+    </Grid>
+    <!--Title="SendingMessageWindow" Height="295" Width="340" ResizeMode="NoResize" WindowStyle="None">
+    <Grid  x:Name="GridMail" Background="#FF62757F" Height="295" VerticalAlignment="Top">
+        <TextBox x:Name="LoginMail" materialDesign:HintAssist.Hint="Логин" HorizontalAlignment="Left" Height="24" Margin="40,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontFamily="Roboto" Foreground="Black" FontSize="11">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="PasswordMail" materialDesign:HintAssist.Hint="Пароль" HorizontalAlignment="Left" Height="25" Margin="40,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontFamily="Roboto" FontSize="11"/>
+        <ComboBox x:Name="ComboBoxUserApprove" HorizontalAlignment="Left" Margin="40,180,0,0" VerticalAlignment="Top" Width="260" Height="30" FontFamily="Roboto"/>
+        <Button x:Name="OkMail" Content="Отправить" Height="21" VerticalAlignment="Top" Width="140" HorizontalAlignment="Right" Background="#FF90A4AE" BorderBrush="#FF90A4AE" Foreground="#DD000000" OpacityMask="#FF90A4AE" Margin="0,245,180,0" FontFamily="Roboto" FontWeight="Normal" FontSize="11"  />
+        <Button x:Name="CancelMail" Content="Отмена" Height="20" VerticalAlignment="Top" Width="140" HorizontalAlignment="Right" BorderBrush="#FF90A4AE" Foreground="#DD000000" OpacityMask="#FF90A4AE" Margin="0,245,20,0" FontFamily="Roboto" FontWeight="Normal" FontSize="11" Background="#FF90A4AE" />
+        <TextBlock HorizontalAlignment="Center" Margin="40,114,40,166" TextWrapping="Wrap" Text="Введите пароль от почты:" VerticalAlignment="Center" Width="260" Height="15" Foreground="#FF90A4AE" FontFamily="Roboto" FontSize="12"/>
+        <TextBlock HorizontalAlignment="Center" Margin="40,65,40,215" TextWrapping="Wrap" Text="Введите логин от почты:" VerticalAlignment="Center" Width="260" Height="15" Foreground="#FF90A4AE" FontFamily="Roboto" FontSize="12"/>
+        <TextBlock HorizontalAlignment="Center" Margin="40,165,40,115" TextWrapping="Wrap" Text="Выберете получателя для согласования:" VerticalAlignment="Center" Width="260" Height="15" Foreground="#FF90A4AE" FontFamily="Roboto" FontSize="12"/>
+        <Button x:Name="Exit" Height="40" VerticalAlignment="Top" Width="50" HorizontalAlignment="Right" BorderBrush="#FF90A4AE" Foreground="#FF90A4AE" OpacityMask="#FF90A4AE" Click="ExitLogin_Click" Background="#FF90A4AE">
+            <Image Source="/ImageStore;component/Icon/Exit.png" Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"/>
+        </Button>
+    </Grid>-->
+</Window>

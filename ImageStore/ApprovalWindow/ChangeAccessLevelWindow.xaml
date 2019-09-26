@@ -1,0 +1,28 @@
+﻿<Window x:Class="ImageStore.ApprovalWindow.ChangeAccessLevelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ImageStore.ApprovalWindow"
+        mc:Ignorable="d"
+        Title="ChangeAccessLevelWindow"  Height="170" Width="340" ResizeMode="NoResize" WindowStyle="None">
+    <Grid  x:Name="GridAddDrive" Background="#FFB9D1EA">
+        <Button x:Name="Reject" Content="Отклонить" Height="24" VerticalAlignment="Top" Width="114" HorizontalAlignment="Right" Background="#FF90A4AE" BorderBrush="#FF90A4AE" OpacityMask="#FF90A4AE" Margin="0,130,50,0" FontFamily="Roboto" FontWeight="Normal" FontSize="16" Click="Reject_Click" >
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="ExitMail" Height="35" VerticalAlignment="Top" Width="60" HorizontalAlignment="Right" Background="#FFB9D1EA" BorderBrush="#FF90A4AE" Foreground="#FF90A4AE" OpacityMask="#FF90A4AE" Click="ExitMail_Click">
+            <Image Source="/ImageStore;component/Icon/Exit.png" Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Button>
+        <TextBlock Name="TextBlockNewUser" HorizontalAlignment ="Left" Margin="20,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Visible" Height="81" Width="300" FontSize="20"/>
+        <Button x:Name="Allow" Content="Разрешить" Height="24" VerticalAlignment="Top" Background="#FF90A4AE" BorderBrush="#FF90A4AE" OpacityMask="#FF90A4AE" Margin="50,130,176,0" FontFamily="Roboto" FontWeight="Normal" FontSize="16" RenderTransformOrigin="-0.05,0.375" Click="Allow_Click" >
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+        <Label Name="labelLogin" Content=""  Visibility="Hidden" HorizontalAlignment="Left" Margin="20,9,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Name="labelAccess" Content="" Visibility="Hidden" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="65"/>
+    </Grid>
+</Window>

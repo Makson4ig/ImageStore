@@ -1,0 +1,24 @@
+﻿<Window x:Class="ImageStore.ServiceWindows.DatabaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageStore.ServiceWindows"
+        mc:Ignorable="d"
+        Title="DatabaseWindow" Height="120" Width="275" ResizeMode="NoResize" WindowStyle="None" BorderBrush="#FFEC1616">
+    <Grid Background="#FFB9D1EA">
+
+        <Image Source="../Icon/info.png" Width="30" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" Margin="10,40,235,54"/>
+
+
+        <TextBlock x:Name="DbSelect" HorizontalAlignment="Left" Margin="60,40,-30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="210" FontSize="20
+                       " FontFamily="Roboto" Text="Успешно подключено!"/>
+        <Button x:Name="OkDb" Content="Ок" Margin="95,80,95,20" VerticalAlignment="Center" Height="20" BorderBrush="#FF62757F" Background="#FF62757F" FontFamily="Roboto" FontSize="10" Click="Ok_Click">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+
+
+    </Grid>
+</Window>

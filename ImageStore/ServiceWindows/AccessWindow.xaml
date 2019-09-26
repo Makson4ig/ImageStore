@@ -1,0 +1,24 @@
+﻿<Window x:Class="ImageStore.ServiceWindows.AccessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageStore.ServiceWindows"
+        mc:Ignorable="d"
+        Title="AccessWindow" Height="160" Width="340" ResizeMode="NoResize" WindowStyle="None" BorderBrush="#FFEC1616">
+    <Grid Background="#FFB9D1EA">
+        <TextBlock Name="LoginNewUser" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="14" FontFamily="Roboto" Visibility="Hidden" Text="пока что ноль" VerticalAlignment="Top" Height="40" Width="215" Margin="65,40,0,0" />
+        <Image Source="../Icon/info.png" Width="40" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" Margin="20,50,280,75" RenderTransformOrigin="0,0.577"/>
+        <Button x:Name="OkPermissions" Content="Ок" HorizontalAlignment="Left" Margin="60,120,0,0" VerticalAlignment="Top" Width="84" Height="30" BorderBrush="#FF62757F" Background="#FF62757F" FontFamily="Roboto" FontSize="14" Click="Ok_Click">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" FontFamily="Roboto" Text="Отправить сообщение для согласования доступа в систему?" VerticalAlignment="Top" Height="75" Width="255" Margin="65,40,0,0" />
+        <Button x:Name="Cancel" Content="Отмена" Margin="196,120,60,0" VerticalAlignment="Top" Height="30" Background="#FF62757F" BorderBrush="#FF62757F" FontFamily="Roboto" FontSize="14" Click="Cancel_Click">
+            <Button.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </Button.Foreground>
+        </Button>
+    </Grid>
+</Window>

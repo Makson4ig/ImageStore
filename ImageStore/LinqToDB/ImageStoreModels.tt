@@ -1,0 +1,11 @@
+<#@ template language="C#" debug="True" hostSpecific="True"                           #>
+<#@ output extension=".generated.cs"                                                  #>
+<#@ include file="$(LinqToDBT4SqlServerTemplatesDirectory)LinqToDB.SqlServer.Tools.ttinclude" #>
+<#@ include file="$(LinqToDBT4SqlServerTemplatesDirectory)PluralizationService.ttinclude"     #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\LinqToDB.SqlServer.Tools.ttinclude" #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"     #>
+<#
+	NamespaceName = "ImageStore.Models.LinqToDB";
+	LoadSqlServerMetadata(@"31.31.196.202", "u0718435_ImageStore2","u0718435_Maxim","Q1w2e3r4t5"); // Integrated Security
+	GenerateModel();
+#>
